@@ -1,1 +1,1 @@
-module figure-calculation
+module project
