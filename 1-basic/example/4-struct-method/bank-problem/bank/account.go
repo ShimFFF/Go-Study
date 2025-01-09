@@ -1,13 +1,15 @@
 package bank
 
+import "project-bank/bank/printer"
+
 // Account 구조체 정의
 type Account struct {
 	balance float64
-	printer AccountOutput // 출력 전략 인터페이스
+	printer printer.AccountOutput // 출력 전략 인터페이스
 }
 
 // NewAccount: Account 생성자
-func NewAccount(initialBalance float64, printer AccountOutput) *Account {
+func NewAccount(initialBalance float64, printer printer.AccountOutput) *Account {
 	return &Account{
 		balance: initialBalance,
 		printer: printer,

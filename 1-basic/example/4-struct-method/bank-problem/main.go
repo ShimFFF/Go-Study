@@ -3,11 +3,12 @@ package main
 import (
 	"fmt"
 	"project-bank/bank"
+	"project-bank/bank/printer"
 )
 
 func main() {
 	// ConsolePrinter 사용
-	consolePrinter := &bank.ConsolePrinter{}
+	consolePrinter := &printer.ConsolePrinter{}
 	account := bank.NewAccount(0.0, consolePrinter)
 
 	// 또는 FilePrinter 사용
