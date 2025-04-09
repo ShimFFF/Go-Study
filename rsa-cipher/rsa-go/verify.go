@@ -11,8 +11,8 @@ func VerifySignature(publicKey *rsa.PublicKey, message string, signature []byte)
 
 	err := rsa.VerifyPSS(publicKey, crypto.SHA256, hashed[:], signature, nil)
 	if err != nil {
-		fmt.Println("❌ 서명 검증 실패:", err)
+		fmt.Println("서명 검증 실패:", err)
 	} else {
-		fmt.Println("✅ 서명 검증 성공!")
+		fmt.Println("서명 검증 성공!")
 	}
 }
